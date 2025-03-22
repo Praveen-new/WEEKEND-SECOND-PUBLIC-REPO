@@ -1,0 +1,61 @@
+Agenda:
+
+AWS Free-Tier Account Creation Steps:
+
+EC2: Remote Servers or Virtual Machines or Virtual Operating System
+Elastic Computing Cloud
+
+   --->Windows Instance Creation and Connectivity
+   --->Linux(Linux2023/Ubuntu)  Instance Creation and Connectivity
+
+EBS: Elastic Block Storage
+     Remote SSD or HDD
+   Additional Volumes
+    Root Volume--->OS
+    Data Volume
+       Windows--->10 gb
+       Linux--->5 gb
+   Zone:   zone of volume and ec2 must be same
+
+   --->Volume Creation,attach,detach,delete
+
+IAM: Identity and Access Management
+
+   --->Users,Groups,Policies,Roles
+        Creating User
+        Creating Group
+        Add the User to Group
+        Providing Access permissions and credentials for user
+          Using Sign-link login with user credentials
+        Creating Role:
+           Group of Policies
+             EC2FULLACCESS
+             S3FULLACCESS
+             RDSFULLACCESS
+             DYNAMODBFULLACCESS
+ 
+VPC:
+  Virtual Private Cloud
+   Every account contains one default vpc:
+   We are Going to create Custom-VPC
+    
+  --->Creation of vpc
+       --->Create VPC with address
+             10.0.0.0/16
+           Subnets:
+             10.0.1.0/24
+           Internet gateway and attach to vpc
+                igw-1
+           Route table (route-1)
+             |
+             Edit Routes by allowing any type of IPV4 traffic through InternetGateway
+             Edit Subnet Associations:  Add the Subnet to route table
+
+--->EC2 in Custom VPC
+
+    Terminate EC2
+    Delete Custom VPC      
+     
+  
+
+
